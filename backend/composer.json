@@ -1,0 +1,24 @@
+{
+  "name": "interview/backend",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Gabriel A. Quiles-Perez",
+      "email": "gaby.quiles@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Interview\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Interview\\Tests\\": "tests/"
+    }
+  },
+  "require": {},
+  "require-dev": {
+    "phpunit/phpunit": "^9"
+  }
+}
