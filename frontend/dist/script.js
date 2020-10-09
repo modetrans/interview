@@ -1,14 +1,19 @@
+/**
+ * Note: jQuery is already included.
+ */
+
+
 /********************************
  * QUESTION 1.
  *******************************/
 function executeQ1() {
-  // Answer goes here.
+  $('#my-name').text('Presley Cobb.');
 }
 
 /********************************
  * QUESTION 2.
  *******************************/
-const listItems = [
+var listItems = [
   'Settings',
   'Customer Support',
   'On Demand',
@@ -17,14 +22,15 @@ const listItems = [
 ];
 
 function executeQ2() {
-  // Answer goes here.
+  const ol = $('#q2-list');
+  appendToList(ol, listItems);
 }
 
 /********************************
  * QUESTION 3.
  *******************************/
-function Person() {
-  var name = '';
+function Person(name) {
+  this.name = name;
 
   this.setName = function(n) {
     name = n;
@@ -32,20 +38,39 @@ function Person() {
 
   this.getName = function() {
     return name;
-  };
+  }
 }
 
 function executeQ3() {
-  // Answer goes here.
+  const Scott = new Person('Scott');
+  const Matt = new Person('Matt');
+  const ol = $('#q3-list');
+  //Alternatively you can create the instance call setName on that instance then get the name value from that instance using getName. That approach has the advantage of keeping the name property private and only ahttps://codepen.io/pen/ccessible via the getName method assumming you define name with var.
+  const names = [Scott.name, Matt.name];
+  appendToList(ol, names)
 }
 
 /********************************
  * QUESTION 4.
  *******************************/
-function executeQ4() {
-  const api_key = '963ebfe51d3641be829b20f4a1f19ca4';
-  //The movie api only provies a filename for posters. Please prepend the poster prefix to get the full url. 
-  const poster_url_prefix = 'https://image.tmdb.org/t/p/w500/';
+async function executeQ4() {
+  var fileURL = 'https://hydracdn.frontiertv.com/widgets/common/ch131images.json';
   
-  //Please display your result in div#q4-answer.
+  // Save image IDs in the data array.
+  //var data = [];
+  
+  // Get the data in fileURL using AJAX, process the reponse and add it to the HTML.
+  const response = await fetch(fileURL);
+  const data = await response.json();
+  const keys = Object.keys(data.images);
+  const string = [JSON.stringify(keys)];
+  const node = $('#q4-answer');
+  appendToList(node, string);
+}
+/********************************
+ * HELPER
+ *******************************/
+//Defining a helper here to keep the code DRY;
+const appendToList = (node, list) => {
+  list.forEach( item => node.append(`<li>${item}</li>`));
 }

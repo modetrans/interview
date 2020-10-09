@@ -13,12 +13,18 @@ body {
  *******************************/
 .q5-wrapper {
     background: #EFEFEF;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
 }
 .q5-wrapper .q5-block {
     width: 100px;
     height: 100px;
     margin: 10px;
     background: #333;
+}
+.q5-block:nth-of-type(odd) {
+    background-color:#00FF00;
 }
 
 /* Add your code after this line */
@@ -28,3 +34,20 @@ body {
  * QUESTION 6.
  *******************************/
 /* Add your code after this line */
+
+.header {
+  background-color: #F00;
+  text-align: center;
+}
+.header h2 {
+  color:#FFF;
+}
+
+.file-name {
+  color: #00F;
+  font-weight: bold;
+}
+
+#my-name {
+  text-transform: uppercase;
+}
