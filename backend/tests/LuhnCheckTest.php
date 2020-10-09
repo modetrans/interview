@@ -25,10 +25,16 @@ class LuhnCheckTest extends TestCase
         $this->assertEquals($expectedResult, $actualResult);
     }
 
-    public function testThrowExceptionIfNotNumericString()
+    public function testThrowExceptionIfNotNumericStringProvided()
     {
         $this->expectException(InvalidNumberException::class);
         $this->sut->isValid('Abc');
+    }
+
+    public function testThrowExceptionIfEmptyStringProvided()
+    {
+        $this->expectException(InvalidNumberException::class);
+        $this->sut->isValid('');
     }
 
     public function provideNumberWithValidity()

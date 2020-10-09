@@ -15,6 +15,8 @@ class LuhnCheck
      */
     public function isValid(string $number): bool
     {
+        $this->validateNumber($number);
+
         // Split into characters
         $digits = str_split($number, 1);
         // Extract Checksum
@@ -29,6 +31,17 @@ class LuhnCheck
         $sum = array_sum($substracted);
         $modulus10 = ($sum * 9) % 10;
         return $checksum == $modulus10;
+    }
+
+    private function validateNumber(string $number)
+    {
+        if ($number === '') {
+            throw new InvalidNumberException("Invalid number, empty string provided");
+        }
+
+        if (preg_match('/^[0-9]*$/', $number) === 0) {
+            throw new InvalidNumberException("Invalid number, contains non-numeric characters");
+        }
     }
 
     /**
