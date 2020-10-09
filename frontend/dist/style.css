@@ -1,12 +1,66 @@
 body {
     font-family: Arial;
 }
+
 .question {
     margin-bottom: 60px;
 }
+
 .question .description {
     font-size: 18px;
 }
+
+/********************************
+ * QUESTION 4.
+ *******************************/
+
+#q4-answer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.movie {
+    display: flex;
+    justify-content: flex-start;
+    width: 500px; /** size of the backdrops **/
+    height: 281px;
+    margin-bottom: 3em;
+}
+
+.movie .backdrop {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.15;
+}
+
+.movie .poster-holder {
+    height: 281px;
+}
+
+.movie .poster {
+    height: 90%;
+    margin: 1em;
+}
+
+.movie .details {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.movie .summary-container {;
+    overflow-y: auto;
+    background-color: #f7f3f3;
+    padding: 10px;
+    border: 2px solid #f7f3f3;
+    border-radius: 10px;
+}
+
+.movie .summary-container p:first-child {;
+    margin-block-start: 0;
+}
+
 
 /********************************
  * QUESTION 5.
@@ -14,6 +68,7 @@ body {
 .q5-wrapper {
     background: #EFEFEF;
 }
+
 .q5-wrapper .q5-block {
     width: 100px;
     height: 100px;
@@ -22,9 +77,30 @@ body {
 }
 
 /* Add your code after this line */
+.q5-wrapper {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
 
+.q5-wrapper .q5-block:nth-child(odd) {
+    background-color: #00FF00;
+}
 
 /********************************
  * QUESTION 6.
  *******************************/
 /* Add your code after this line */
+.header {
+    background-color: #F00;
+    color: #FFF;
+    text-align: center;
+}
+
+.file-name {
+    color: #00F;
+    font-weight: bold;
+}
+
+#my-name {
+    text-transform: uppercase;
+}
