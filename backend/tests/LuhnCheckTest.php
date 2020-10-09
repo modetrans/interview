@@ -35,7 +35,11 @@ class LuhnCheckTest extends TestCase
     {
         return [
             ['79927398713', true],
-            ['79927398711', false]
+            ['79927398711', false],
+            ['8961019501234400001', true],
+            ['9501234400008', true],
+            ['9501234400001', false],
+            ['4556737586899855', true],
         ];
     }
 }
