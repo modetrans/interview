@@ -6,6 +6,13 @@ use Interview\Exceptions\InvalidNumberException;
 
 class LuhnCheck
 {
+    /**
+     * Checks if a number is valid according to Luhn algorithm. The last digit of the string represents the checksum
+     * of the number.
+     * @param string $number
+     * @return bool
+     * @throws InvalidNumberException
+     */
     public function isValid(string $number): bool
     {
         // Split into characters
@@ -23,14 +30,18 @@ class LuhnCheck
         $modulus10 = ($sum * 9) % 10;
         return $checksum == $modulus10;
     }
-    
+
+    /**
+     * Multiply by 2 all numbers in an odd position.
+     * @param array $digits
+     * @return array
+     */
     private function doubleOddPositionedDigits(array $digits)
     {
         foreach ($digits as $i => $singleDigit) {
-            // If character is not a number then its an invalid number
+            // If character is not a number then its an invalid character
             if (!is_numeric($singleDigit)) {
-//                TODO: Add meaningful message
-                throw new InvalidNumberException();
+                throw new InvalidNumberException("Invalid number, contains non-numeric characters");
             }
             // Since array positions is based 0, that means that odd positions have an even index
             if ($i % 2 === 0) {
@@ -40,6 +51,11 @@ class LuhnCheck
         return $digits;
     }
 
+    /**
+     * Substract 9 from every number greater than 9.
+     * @param array $doublesArray
+     * @return array
+     */
     private function substractNineOverNine(array $doublesArray)
     {
         foreach ($doublesArray as $idx => $doubled) {
