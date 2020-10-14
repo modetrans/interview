@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+
 body {
     font-family: Arial;
 }
@@ -6,6 +8,66 @@ body {
 }
 .question .description {
     font-size: 18px;
+}
+
+/********************************
+ * QUESTION 4. themoviedb styles
+ *******************************/
+
+ .top-movie-wrapper {
+    display: grid;
+    grid-template-columns: 100px 100px 100px 500px;
+    margin-bottom: 5em;
+    font-family: Raleway;
+    font-size: 1.0em;
+}
+
+.top-movie-poster {
+    border-radius: 15px;
+    background-color: grey;
+    box-shadow: 0px 3px 5px 0px #333;
+}
+
+.top-movie-poster img {
+    border-radius: 15px;
+}
+
+.top-movie-title {
+    position: relative;
+    top: 157px;
+    left: -100px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.top-movie-popularity {
+    position: relative;
+    left: -70px;
+}
+
+.top-movie-popularity .popularity {
+    color: #e3910e;
+    text-shadow: #020;
+    font-size: 1.3em;
+}
+
+.top-movie-overview {
+    position: relative;
+    left: -70px;
+    font-style: oblique;
+    line-height: 1.3em;
+}
+
+.tmdb-attribution img {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.tmdb-attribution p {
+    margin-bottom: 20px;
+    display: inline-block;
+    position: relative;
+    top: -33px;
 }
 
 /********************************
@@ -22,9 +84,31 @@ body {
 }
 
 /* Add your code after this line */
+.q5-wrapper {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    column-gap: 10px;
+}
 
+.q5-block:nth-child(odd) {
+    background-color: #00FF00;   
+}
 
 /********************************
  * QUESTION 6.
  *******************************/
 /* Add your code after this line */
+h2 {
+    background-color: #F00;
+    color: #FFF;
+    text-align: center;
+}
+
+.file-name {
+    color: #00F;
+    font-weight: bold;
+}
+
+#my-name {
+    text-transform: uppercase;
+}

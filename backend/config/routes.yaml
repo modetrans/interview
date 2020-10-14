@@ -1,0 +1,3 @@
+index:
+   path: /{subject}
+   controller: App\Controller\DefaultController::index
