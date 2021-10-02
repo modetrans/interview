@@ -7,19 +7,26 @@
 
 require(__DIR__ . '/LuhnValidator.php');
 
+use ModeTrans\LuhnValidator;
+
 // Get the provided argument and feed it into the LuhnValidator
 $input = trim($argv[1] ?? null);
 $luhn = new LuhnValidator($input);
 
-if($luhn->isValid()) {
-	echo "$input is valid.\n";
-	exit(0);
+if ($luhn->isValid()) {
+    echo "$input is valid.\n";
+    exit(0);
 } else {
-	$error = "$input is not valid.";
+    $error = '';
 
-	if($luhn->getError())
-		$error .= " {$luhn->getError()}";
+    if ($input || $input === '0') {
+        $error = "$input is not valid.";
+    }
 
-	echo "$error\n";
-	exit(1);
+    if ($luhn->getError()) {
+        $error .= " {$luhn->getError()}";
+    }
+
+    echo "$error\n";
+    exit(1);
 }

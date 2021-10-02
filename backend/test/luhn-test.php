@@ -6,6 +6,8 @@
 
 require(__DIR__ . '/../src/LuhnValidator.php');
 
+use ModeTrans\LuhnValidator;
+
 $testValues = [
     '0' => false,
     '1' => false,
@@ -26,12 +28,12 @@ $testValues = [
 // Test the LuhnValidator class itself
 $results = [];
 $failure = false;
-foreach($testValues as $value => $expected) {
+foreach ($testValues as $value => $expected) {
     $luhn = new LuhnValidator($value);
 
     $result = $luhn->isValid() === $expected;
 
-    if(!$result) {
+    if (!$result) {
         $resultStr = 'FAIL';
         $failure = true;
     } else {
@@ -42,17 +44,18 @@ foreach($testValues as $value => $expected) {
     echo "Test \"$value\": $resultStr\n";
 }
 
-if($failure)
+if ($failure) {
     echo "LuhnValidator: One or more tests failed.\n\n";
-else
+} else {
     echo "LuhnValidator: All tests have passed.\n\n";
+}
 
 // Test the main.php script
 $results = [];
 $output = [];
 $returnCode = 0;
 $failure = false;
-foreach($testValues as $value => $expected) {
+foreach ($testValues as $value => $expected) {
     $mainPath = __DIR__ . '/../src/main.php';
     exec("php $mainPath $value", $output, $returnCode);
 
@@ -60,7 +63,7 @@ foreach($testValues as $value => $expected) {
     // e.g. 0 is true (valid), 1 is false (invalid)
     $result = $returnCode == !$expected;
 
-    if(!$result) {
+    if (!$result) {
         $resultStr = 'FAIL';
         $failure = true;
     } else {
@@ -70,7 +73,8 @@ foreach($testValues as $value => $expected) {
     echo "Shell Test \"$value\": $resultStr\n";
 }
 
-if($failure)
+if ($failure) {
     echo "main.php: One or more tests failed.\n";
-else
+} else {
     echo "main.php: All tests have passed.\n\n";
+}
