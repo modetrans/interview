@@ -9,6 +9,46 @@ body {
 }
 
 /********************************
+ * QUESTION 4.
+ *******************************/
+/* Movie CSS */
+#q4-answer {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 2% 5%;
+}
+
+.movie-title {
+    border-bottom: 2px solid black;
+    font-size: 26px;
+    margin-bottom: 0;
+    padding-bottom: 6px;
+}
+
+.movie-block {
+    display: grid;
+    grid-template-columns: 250px auto;
+    grid-gap: 15px;
+}
+
+.movie-poster {
+    border-radius: 15px;
+    border-color: firebrick;
+    border-width: 3px;
+    border-style: outset;
+    width: 250px;
+}
+
+.movie-info-list dt {
+    margin-bottom: 9px;
+}
+
+.movie-info-list dd {
+    margin-left: 20px;
+    margin-bottom: 18px;
+}
+
+/********************************
  * QUESTION 5.
  *******************************/
 .q5-wrapper {
@@ -22,9 +62,32 @@ body {
 }
 
 /* Add your code after this line */
-
+.q5-wrapper {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+.q5-wrapper .q5-block:nth-child(odd) {
+    background: #00FF00;
+}
 
 /********************************
  * QUESTION 6.
  *******************************/
 /* Add your code after this line */
+
+/*
+ Instructions indicated to use css/question6.css, but this comment section
+ is here, so I'm going to guess that text is from an older version.
+*/
+header {
+    background-color: #F00;
+    color: #FFF;
+    text-align: center;
+}
+.file-name {
+    color: #00F;
+    font-weight: bold;
+}
+#my-name {
+    text-transform: uppercase;
+}
