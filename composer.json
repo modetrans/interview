@@ -1,0 +1,10 @@
+{
+  "name": "mode/interview",
+  "description": "Assessment Project",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  }
+}

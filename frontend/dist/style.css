@@ -13,6 +13,9 @@ body {
  *******************************/
 .q5-wrapper {
     background: #EFEFEF;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
 }
 .q5-wrapper .q5-block {
     width: 100px;
@@ -20,11 +23,50 @@ body {
     margin: 10px;
     background: #333;
 }
+.q5-wrapper .q5-block:nth-child(odd) {
+    background: #0F0;
+}
 
 /* Add your code after this line */
-
+.styled-table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 14px;
+    width: 95%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table thead tr {
+    background-color: #009879;
+    color: #FFF;
+    text-align: left;
+}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+.styled-table tbody tr {
+    border-bottom: 1px solid #DDD;
+}
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
 
 /********************************
  * QUESTION 6.
  *******************************/
 /* Add your code after this line */
+header {
+    background-color: #F00;
+    color: #FFF;
+    text-align: center;
+}
+.file-name {
+    color: #00F;
+    font-weight: bold;
+}
+#my-name {
+    text-transform: uppercase;
+}
