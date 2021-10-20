@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, serif;
+    margin: 25px;
+}
+
+.question {
+    margin-bottom: 60px;
+}
+
+.question .description {
+    font-size: 18px;
+}
+
+.clear {
+    clear: right;
+}
+
+/********************************
+ * QUESTION 4.
+ *******************************/
+.poster-art {
+    float: right;
+    max-height: 300px;
+    margin: 0 0 20px 150px;
+}
+
+.movie-title {
+    text-align: right;
+    font-size: 1.5rem;
+}
+
+.movie-popularity {
+    text-align: right;
+    font-size: 1.2rem;
+}
+
+.movie-overview {
+    text-align: center;
+    padding: 0 150px;
+}
+
+/********************************
+ * QUESTION 5.
+ *******************************/
+.q5-wrapper {
+    background: #EFEFEF;
+}
+
+.q5-wrapper .q5-block {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background: #333;
+}
+
+/* Add your code after this line */
+.odd {
+    background: #00FF00!important;
+}
+
+/********************************
+ * QUESTION 6.
+ *******************************/
+/* Add your code after this line */
+
+header {
+    background-color: #F00;
+    color: #FFF;
+    text-align: center;
+    padding: 15px 0;
+    margin-bottom: 15px;
+}
+
+.file-name {
+    color: #00F;
+    font-weight: bold;
+}
+
+#my-name {
+    text-transform: uppercase;
+}
