@@ -11,10 +11,10 @@ Provided in `src` is a "hello world" PHP app with 2 files.
 
 ## Part 1: Infrastructure
 Your goal is to set up this app so that it runs on AWS infrastructure. 
-You can choose any appropriate AWS technology.
+You can choose any appropriate AWS technology. Please utilize the AWS Free Tier if you do not have a personal AWS account already. https://aws.amazon.com/free
 
 Your output for this step should be a **single command** (or very few commands) that fully initializes and configures all required infrastructure.
-Please update this **README** file as part of the solution to **document the execution procedure, assumptions, considerations**, etc.
+Please **update** this **README** file as part of the solution to **document the execution procedure, assumptions, environment setups, considerations**, etc.
 
 If you would like, you can set up the infrastructure and provide a working link.
 
