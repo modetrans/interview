@@ -13,14 +13,20 @@ Provided in `src` is a "hello world" PHP app with 2 files.
 Your goal is to set up this app so that it runs on AWS infrastructure. 
 You can choose any appropriate AWS technology. Please utilize the AWS Free Tier if you do not have a personal AWS account already. https://aws.amazon.com/free
 
-Your output for this step should be a **single command** (or very few commands) that fully initializes and configures all required infrastructure.
+Your output for this step should be a **single or very few commands** that fully initializes and configures all required infrastructure.
 Please **update** this **README** file as part of the solution to **document the execution procedure, assumptions, environment setups, considerations**, etc.
 
-If you would like, you can set up the infrastructure and provide a working link.
+#### The code will be run on a brand new AWS account where you will need to provision a New VPC as part of your infrastructure stack.
+
+### Part 1 Solution Below ###
+
+TODO: Provide DETAIL steps on how to run your provisioning code
+
+### Part 1 Solution Above ###
 
 ## Part 2: CI/CD
 Your goal for this step is to set up an automated build and deployment pipeline. Please use a SaaS provider that has
-the ability to be configured entirely by file. GitHub Actions, AWS CodePipeline, GitLab, TravisCI, CircleCI, or any other provider with a free tier.
+the ability to be configured entirely by file. GitHub Actions, GitLab, CircleCI, TravisCI, or any other provider with a free tier.
 
 The pipeline steps should be:
 
@@ -34,5 +40,11 @@ as an HTTP header or within the web application.
 
 Your deliverable here should be a configuration file that we could run. You can also share access to the SaaS to show us
 your own working pipeline.
+
+### Part 2 Solution Below ###
+
+TODO: Provide CI/CD Pipeline
+
+### Part 2 Solution Above ###
 
 Good luck!
