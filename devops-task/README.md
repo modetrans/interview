@@ -16,7 +16,7 @@ You can choose any appropriate AWS technology. Please utilize the AWS Free Tier 
 Your output for this step should be a **single or very few commands** that fully initializes and configures all required infrastructure.
 Please **update** this **README** file as part of the solution to **document the execution procedure, assumptions, environment setups, considerations**, etc.
 
-#### The code will be run on a brand new AWS account where you will need to provision a New VPC as part of your infrastructure stack.
+#### The code will be run on a brand new AWS account where you will need to provision everything as part of your infrastructure stack.
 
 ### Part 1 Solution Below ###
 
